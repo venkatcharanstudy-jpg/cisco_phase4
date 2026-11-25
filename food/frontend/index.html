@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Smart Food Ordering</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Spice Route Kitchen</h1>
+    <div id="who" class="who hidden">
+      <span id="whoName"></span>
+      <button id="logoutBtn" class="ghost">Log out</button>
+    </div>
+  </header>
+
+  <section id="loginView" class="card login">
+    <h2>Sign in</h2>
+    <form id="loginForm">
+      <label>Username <input id="loginUser" autocomplete="username" required /></label>
+      <label>Password <input id="loginPass" type="password" autocomplete="current-password" required /></label>
+      <button type="submit">Sign in</button>
+      <p id="loginError" class="error"></p>
+    </form>
+  </section>
+
+  <main id="appView" class="layout hidden">
+    <section class="card">
+      <h2>Menu</h2>
+      <div id="menu" class="menu"></div>
+    </section>
+
+    <section class="card">
+      <h2>Your cart</h2>
+      <ul id="cart" class="cart"></ul>
+      <p>Total: <strong id="cartTotal">0.00</strong></p>
+      <button id="placeOrderBtn">Place order</button>
+      <p id="cartMessage" class="muted"></p>
+    </section>
+
+    <section class="card">
+      <h2>Your orders</h2>
+      <div id="orders"></div>
+    </section>
+
+    <section class="card chat">
+      <h2>Assistant</h2>
+      <div id="chatLog" class="chat-log"></div>
+      <form id="chatForm">
+        <input id="chatInput" placeholder="Ask about the menu, delivery, or orders…" maxlength="2000" required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <section id="adminView" class="card hidden admin">
+      <h2>Admin: knowledge base</h2>
+      <form id="uploadForm">
+        <input id="uploadFile" type="file" accept=".txt,.pdf,.docx" required />
+        <button type="submit">Upload</button>
+      </form>
+      <p id="uploadMessage" class="muted"></p>
+      <div id="documents"></div>
+      <h2>Admin: update order status</h2>
+      <form id="statusForm">
+        <input id="statusOrderId" type="number" min="1" placeholder="Order id" required />
+        <select id="statusValue">
+          <option>PREPARING</option>
+          <option>READY</option>
+          <option>DELIVERED</option>
+          <option>CANCELLED</option>
+        </select>
+        <button type="submit">Update</button>
+      </form>
+      <p id="statusMessage" class="muted"></p>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/script.js"></script>
+</body>
+</html>
