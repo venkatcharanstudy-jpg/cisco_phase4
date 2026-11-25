@@ -1,0 +1,7 @@
+Delivery Policy - Spice Route Kitchen
+
+Delivery hours: We deliver every day from 10:00 to 23:00.
+Delivery fee: Orders above 300 are delivered free. Orders below 300 carry a flat delivery fee of 30.
+Estimated time: Most orders arrive within 35 to 45 minutes. Biryani orders may take up to 55 minutes.
+Order changes: An order can be cancelled by the customer only while its status is CONFIRMED. Once the kitchen starts preparing the order, it can no longer be cancelled.
+Capacity: Each dish has a daily capacity. When a dish is sold out for the day, it cannot be added to a new order.
