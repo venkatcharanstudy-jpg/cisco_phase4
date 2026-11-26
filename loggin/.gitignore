@@ -1,0 +1,5 @@
+netpulse.db
+__pycache__/
+.pytest_cache/
+.venv/
+netpulse.log
